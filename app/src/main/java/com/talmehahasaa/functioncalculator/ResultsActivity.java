@@ -208,25 +208,21 @@ public class ResultsActivity extends AppCompatActivity {
         // Format vertex form
 
         String vertexFunction = "f(x)=" + adf;
-        String pf = "asdfsadf";
-        String kf = "sadfas";
+        String pf;
+        String kf;
         if (p == 0) {
             pf = "x²";
-        } else if (k == 0) {
-            kf = "";
+        } else if (p > 0) {
+            pf = "(x-" + pdf + ")²";
         } else {
-            pf = "(x";
-            kf = ")²";
-            if (p > 0) {
-                pf += "-" + pdf;
-            } else {
-                pf += "+" + pdf;
-            }
-            if (k > 0) {
-                kf += "+" + kdf;
-            } else {
-                kf += kdf;
-            }
+            pf = "(x+" + pdf + ")²";
+        }
+        if (k == 0) {
+            kf = "";
+        } else if (k > 0) {
+            kf = "+" + kdf;
+        } else {
+            kf = kdf;
         }
         vertexFunction += pf + kf;
         System.out.println(vertexFunction);
