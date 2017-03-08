@@ -23,9 +23,9 @@ public class ResultsActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    @BindView(R.id.functionLabel) TextView mStandardLabel;
-    @BindView(R.id.interceptFormLabel) TextView mInterceptLabel;
-    @BindView(R.id.vertexFormLabel) TextView mVertexLabel;
+    @BindView(R.id.function) TextView mStandardLabel;
+    @BindView(R.id.interceptFunction) TextView mInterceptLabel;
+    @BindView(R.id.vertexFunction) TextView mVertexLabel;
 //    @BindView(R.id.functionGraph) GraphView mFunctionGraph;
 //    @BindView(R.id.functionGraph) LineChart mGraph;
 

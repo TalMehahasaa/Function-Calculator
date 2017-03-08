@@ -19,31 +19,58 @@
         >
 
         <TextView
-            android:text="f(x)=ax²+bx+c"
+            android:text="צורה מפורשת"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/functionLabel"
-            android:textColor="@android:color/black"
+            android:layout_margin="8dp"
+            android:textStyle="normal|bold"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:text="f(x)=ax²+bx+c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/function"
+            android:textColor="?attr/textColorAlertDialogListItem"
             android:gravity="center_horizontal"
             android:layout_margin="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/interceptFunctionLabel"
+            android:text="צורת מכפלות"
+            android:layout_margin="8dp"
+            android:textStyle="normal|bold"
+            android:gravity="center_horizontal"/>
 
         <TextView
             android:text="f(x)=a(x-x1)(x-x2)"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/interceptFormLabel"
+            android:id="@+id/interceptFunction"
             android:gravity="center_horizontal"
             android:layout_margin="8dp"
-            />
+            android:textColor="?attr/textColorAlertDialogListItem"/>
+
+        <TextView
+            android:text="צורה קודקודית"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/VertexFunctionLabel"
+            android:layout_margin="8dp"
+            android:textStyle="normal|bold"
+            android:gravity="center_horizontal"/>
 
         <TextView
             android:text="f(x)=a(x-p)²+k"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/vertexFormLabel"
+            android:id="@+id/vertexFunction"
             android:gravity="center_horizontal"
             android:layout_margin="8dp"
-            />
+            android:textColor="?attr/textColorAlertDialogListItem"/>
 
         <!--<com.jjoe64.graphview.GraphView-->
             <!--android:layout_width="match_parent"-->
