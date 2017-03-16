@@ -1,15 +1,8 @@
 package com.talmehahasaa.functioncalculator;
 
-import android.content.Context;
-import android.icu.text.DecimalFormat;
+import java.text.DecimalFormat;
 
-import java.util.List;
-
-/**
- * Created by mac on 3/9/17.
- */
-
-public class Function {
+class Function {
 
     private double a;
     private double b;
@@ -22,13 +15,13 @@ public class Function {
     private String mInterceptFunction;
     private String mVertexFunction;
 
-    public Function(double a, double b, double c) {
+    Function(double a, double b, double c) {
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    public void calculate() {
+    void calculate() {
         double disc = (Math.pow(b, 2) - 4 * a * c);
 
         if (disc > 0) {
@@ -54,7 +47,7 @@ public class Function {
         System.out.println("k: " + k);
     }
 
-    public void format() {
+    void format() {
 
         double pp = Math.abs(p);
         double x1p = Math.abs(x1);
@@ -186,15 +179,43 @@ public class Function {
         System.out.println(mVertexFunction);
     }
 
-    public String getStandardFunction() {
+    String getStandardFunction() {
         return mStandardFunction;
     }
 
-    public String getInterceptFunction() {
+    String getInterceptFunction() {
         return mInterceptFunction;
     }
 
-    public String getVertexFunction() {
+    String getVertexFunction() {
         return mVertexFunction;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public double getB() {
+        return b;
+    }
+
+    public double getC() {
+        return c;
+    }
+
+    public double getX1() {
+        return x1;
+    }
+
+    public double getX2() {
+        return x2;
+    }
+
+    public double getP() {
+        return p;
+    }
+
+    public double getK() {
+        return k;
     }
 }

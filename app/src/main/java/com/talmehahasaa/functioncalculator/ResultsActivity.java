@@ -21,17 +21,13 @@ import butterknife.ButterKnife;
 
 public class ResultsActivity extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+//    LineGraphSeries<DataPoint> series;
+//    double x, y, k, p;
 
     @BindView(R.id.function) TextView mStandardLabel;
     @BindView(R.id.interceptFunction) TextView mInterceptLabel;
     @BindView(R.id.vertexFunction) TextView mVertexLabel;
-
-    private double a;
-    private double b;
-    private double c;
-    private Function mFunction;
-
+//    @BindView(R.id.functionGraph) GraphView mGraph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,16 +36,26 @@ public class ResultsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         Intent intent = getIntent();
-        a = intent.getDoubleExtra("a", 1);
-        b = intent.getDoubleExtra("b", 0);
-        c = intent.getDoubleExtra("c", 0);
+        double a = intent.getDoubleExtra("a", 1);
+        double b = intent.getDoubleExtra("b", 0);
+        double c = intent.getDoubleExtra("c", 0);
 
-        mFunction = new Function(a, b, c);
-        mFunction.calculate();
-        mFunction.format();
-        mStandardLabel.setText(mFunction.getStandardFunction());
-        mInterceptLabel.setText(mFunction.getInterceptFunction());
-        mVertexLabel.setText(mFunction.getVertexFunction());
+        Function function = new Function(a, b, c);
+        function.calculate();
+        function.format();
+
+//        series = new LineGraphSeries<>();
+//        k = function.getK();
+//        p = function.getP();
+//        for (x = k - 100; x <= k + 100; x+=0.1) {
+//            y = a*(x-p)*(x-p)+k;
+//            series.appendData(new DataPoint(x, y), true, (int) (k + 200)*10);
+//        }
+//        mGraph.addSeries(series);
+
+        mStandardLabel.setText(function.getStandardFunction());
+        mInterceptLabel.setText(function.getInterceptFunction());
+        mVertexLabel.setText(function.getVertexFunction());
     }
 
     /*
